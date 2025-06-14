@@ -491,9 +491,10 @@ const ThreeBackground: React.FC<ThreeBackgroundProps> = ({ className = '' }) => 
     <div
       ref={mountRef}
       className={`fixed inset-0 pointer-events-none ${className}`}
-      style={{ 
+      style={{
         zIndex: -1,
-        background: 'radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 1) 100%)'
+        background: 'radial-gradient(circle at center, rgba(138, 43, 226, 0.6) 0%, rgba(0, 191, 255, 0.6) 100%)',
+        backdropFilter: 'blur(50px) saturate(200%) brightness(120%)'
       }}
     />
   );

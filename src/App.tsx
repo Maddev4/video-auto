@@ -21,28 +21,23 @@ function App() {
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Fully Automated Video Creation",
-      description: "Just describe your idea – our AI generates the narration, visuals, music, and animations for you. No editing experience needed."
+      title: "Describe Your Video Idea",
+      description: "Type a topic, upload a script, or give the AI a prompt — VideoAI writes the script and voiceover for you."
     },
     {
       icon: <Eye className="w-8 h-8" />,
-      title: "Narration & Visuals Perfectly Synced",
-      description: "Voiceovers are auto-timed with motion graphics, animations, and effects, eliminating the need for manual syncing."
+      title: "Watch the Scenes Build Themselves",
+      description: "The system generates multilayered templates filled with synced images, transitions, and motion graphics."
     },
     {
       icon: <Wand2 className="w-8 h-8" />,
-      title: "Smart Motion Graphics & Animations",
-      description: "Text boxes, transitions, 3D screens, and article highlights are generated and positioned automatically for a professional finish."
+      title: "Preview and Customize",
+      description: "Swap out visuals, regenerate scenes, or tweak the script — all within seconds."
     },
     {
       icon: <Edit3 className="w-8 h-8" />,
-      title: "Editable Scenes with Full Creative Control",
-      description: "Need changes? Swap, rearrange, delete, or edit, adjust annotations on any scene – you're always in control."
-    },
-    {
-      icon: <Upload className="w-8 h-8" />,
-      title: "One-Click Export or Auto Upload to YouTube",
-      description: "Export your video in a few clicks, or connect your YouTube account and let the platform upload it directly. No rendering, no hassle, just share and grow."
+      title: "Click \"Export\" — You're Done",
+      description: "Get a polished MP4 ready for YouTube — or let the platform auto-upload to your channel."
     }
   ];
 
@@ -50,47 +45,40 @@ function App() {
     {
       name: "Starter",
       price: "$99/month",
-      description: "For youtubers",
+      description: "For solo creators or editors starting out",
       features: [
-        "4 Videos 4/month (60 min max each)",
-        "Youtube Channels: 1 connected",
-        "Includes script, voice, visuals"
+        "Up to 80 minutes of video/month",
+        "Up to 1 YouTube channel connected",
       ]
     },
     {
-      name: "Growth",
+      name: "Growth (most popular)",
       price: "$199/month",
-      description: "Most popular",
+      description: "For growing editors and agencies",
       features: [
-        "Growth - $199/month",
-        "12 videos (20 min each)",
-        "3 YouTube channels",
-        "Mid-tier automation & export"
+        "Up to 240 minutes of video/month",
+        "Up to 3 YouTube channels",
+        "Team collaboration enabled",
       ],
       popular: true
     },
     {
-      name: "Scale",
+      name: "Content Farm Pro",
       price: "$499/month",
-      description: "For agencies",
+      description: "For full-time YouTube teams and content farms",
       features: [
-        "Scale - $499/month",
-        "40 videos (20 min each)",
-        "Unlimited YouTube channels",
-        "Best value per video"
+        "Up to 800 minutes of video/month",
+        "Up to 10 YouTube channels",
+        "Dedicated onboarding",
       ]
     }
   ];
 
   const niches = [
-    { title: "3D Animated Documentaries", image: "/api/placeholder/200/120" },
-    { title: "Historical Deep Dives", image: "/api/placeholder/200/120" },
-    { title: "Geopolitics & Geography", image: "/api/placeholder/200/120" },
-    { title: "Science & Astronomy", image: "/api/placeholder/200/120" },
-    { title: "True Crime & Investigations", image: "/api/placeholder/200/120" },
-    { title: "Motivational & Personal Growth", image: "/api/placeholder/200/120" },
-    { title: "Business & Finance", image: "/api/placeholder/200/120" },
-    { title: "Celebrity Scandals & Biographies", image: "/api/placeholder/200/120" }
+    { title: "Geographic Motion Graphics", image: "/images/geographic-motion-graphics.png", description: "Dynamic country highlights, zooms, and animated conflict overlays — perfect for geopolitics or war topics." },
+    { title: "Auto-Synced Charts & Graphs", image: "/images/auto-synced-charts-graphs.png", description: "Real-time data visualizations like bar charts, progress bars, and counters, matched with your narration." },
+    { title: "AI Avatars", image: "/images/ai-avatars.png", description: "Talking presenters embedded in scenes, reacting to narration and surrounded by dynamic visuals." },
+    { title: "Smart Text Callouts, Quotes & Highlights", image: "/images/smart-text-callouts.png", description: "Auto-generated text boxes, quote highlights, and animated tags that sync to keywords and timestamps." },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -101,7 +89,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* 3D Animated Background */}
       <ThreeBackground />
       
@@ -112,14 +100,14 @@ function App() {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <Zap className="w-8 h-8 text-purple-400" />
-                <span className="ml-2 text-xl font-bold text-white">VideoAI</span>
+                <span className="ml-2 text-xl font-bold text-white">Video AI</span>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#features" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Features</a>
                 <a href="#pricing" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Pricing</a>
-                <a href="#niches" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Niches</a>
+                <a href="#niches" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Automation</a>
                 <button
                   className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:brightness-110"
                   style={{
@@ -165,14 +153,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Fully-Automated Viral
-              <span className="text-4xl md:text-6xl font-bold text-white mb-6 bg-clip-text"> documentaries</span>
+             Video AI 
             </h1>
-            <h2 className="text-xl md:text-2xl text-slate-300 mb-8">
-              From Script to Final Cut
-            </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
-              For editors and content creators who want to automate high-quality YouTube videos in minutes.
+            Turn Ideas Into Viral Documentaries — Automatically
             </p>
             
             {/* Video Preview */}
@@ -204,14 +188,17 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Smart Video Automation
+             Here's what VideoAI can do
             </h2>
+            <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
+            From idea to final edit — VideoAI turns your script into cinematic, narration-synced videos with motion graphics, transitions, and YouTube-ready formatting
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-2 group">
-                <div className="text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300" style={{marginLeft: "150px"}}>
+                <div className="text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300" style={{marginLeft: "100px"}}>
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4" style={{textAlign: "center"}}>
@@ -235,7 +222,7 @@ function App() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border-2 relative ${
                 plan.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20 scale-105' : 'border-slate-700/30'
@@ -254,7 +241,7 @@ function App() {
                   <p className="text-slate-400">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8" style={{height: "150px"}}>
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -275,6 +262,10 @@ function App() {
               </div>
             ))}
           </div>
+          <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
+            Video editors charge $25–$80 per minute for faceless documentary videos like these.
+            With our platform, you get the same result for under $2 per minute — fully automated
+          </p>
         </div>
       </section>
 
@@ -283,22 +274,23 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Niches coming soon...
+              Next-Level Automation Is on the Way
             </h2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {niches.map((niche, index) => (
               <div key={index} className="group cursor-pointer">
+                <button className="text-sm font-medium text-slate-300 text-center hover:text-purple-400 transition-colors duration-300 ease-in-out bg-transparent border border-slate-300 hover:border-purple-400 rounded-md px-8 py-4 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50" style={{width: "280px", height: "80px", marginBottom: "20px"}}>
+                  {niche.title}
+                </button>
                 <div className="bg-slate-800/20 backdrop-blur-sm border border-slate-700/30 rounded-2xl overflow-hidden mb-4 aspect-video relative hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group-hover:scale-105">
                   <video className="absolute inset-0 w-full h-full object-cover" controls>
                     <source src="your-video-link-here.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <h3 className="text-sm font-medium text-slate-300 text-center group-hover:text-purple-400 transition-colors">
-                  {niche.title}
-                </h3>
+                <p className="text-center text-slate-400 text-xs mt-2" style={{fontSize: "16px"}}>{niche.description}</p>
               </div>
             ))}
           </div>
