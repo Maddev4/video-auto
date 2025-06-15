@@ -22,7 +22,7 @@ function App() {
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Describe Your Video Idea",
-      description: "Type a topic, upload a script, or give the AI a prompt — VideoAI writes the script and voiceover for you."
+      description: "Type a topic, upload a script, or give the AI a prompt — Moviq.AI writes the script and voiceover for you."
     },
     {
       icon: <Eye className="w-8 h-8" />,
@@ -100,7 +100,7 @@ function App() {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
                 <Zap className="w-8 h-8 text-purple-400" />
-                <span className="ml-2 text-xl font-bold text-white">Video AI</span>
+                <span className="ml-2 text-xl font-bold text-white">Moviq AI</span>
               </div>
             </div>
             <div className="hidden md:block">
@@ -109,12 +109,12 @@ function App() {
                 <a href="#pricing" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Pricing</a>
                 <a href="#niches" className="text-slate-300 hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">Automation</a>
                 <button
-                  className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:brightness-110"
+                  className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:brightness-110 whitespace-normal break-words min-w-0 w-full sm:w-auto overflow-hidden text-center"
                   style={{
                     background: 'linear-gradient(to right, rgba(234, 245, 237, 0.76), rgba(59, 130, 246, 0.7))',
                   }}
                 >
-                  Join the Waitlist
+                  <span className="inline-block">Join the Waitlist</span>
                 </button>
               </div>
             </div>
@@ -136,12 +136,12 @@ function App() {
               <a href="#pricing" className="block px-3 py-2 text-slate-300 hover:text-purple-400">Pricing</a>
               <a href="#niches" className="block px-3 py-2 text-slate-300 hover:text-purple-400">Niches</a>
               <button
-                className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:brightness-110"
+                className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:brightness-110 whitespace-normal break-words min-w-0 w-full sm:w-auto overflow-hidden text-center"
                 style={{
                   background: 'linear-gradient(to right, rgba(234, 245, 237, 0.76), rgba(59, 130, 246, 0.7))',
                 }}
               >
-                Join the Waitlist
+                <span className="inline-block">Join the Waitlist</span>
               </button>
             </div>
           </div>
@@ -153,7 +153,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-             Video AI 
+            Moviq AI 
             </h1>
             <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
             Turn Ideas Into Viral Documentaries — Automatically
@@ -172,13 +172,13 @@ function App() {
             </div>
 
             <button
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl"
-                style={{
-                  background: 'linear-gradient(to right, rgba(234, 245, 237, 0.76), rgba(59, 130, 246, 0.7))',
-                }}
-              >
-                Join the Waitlist
-              </button>
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-xl whitespace-normal break-words min-w-0 w-full sm:w-auto overflow-hidden text-center"
+              style={{
+                background: 'linear-gradient(to right, rgba(234, 245, 237, 0.76), rgba(59, 130, 246, 0.7))',
+              }}
+            >
+              <span className="inline-block">Join the Waitlist</span>
+            </button>
           </div>
         </div>
       </section>
@@ -188,17 +188,17 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-             Here's what VideoAI can do
+             Here's what Moviq AI can do
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
-            From idea to final edit — VideoAI turns your script into cinematic, narration-synced videos with motion graphics, transitions, and YouTube-ready formatting
+            From idea to final edit — Moviq AI turns your script into cinematic, narration-synced videos with motion graphics, transitions, and YouTube-ready formatting
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-2 group">
-                <div className="text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300" style={{marginLeft: "100px"}}>
+                <div className="text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4" style={{textAlign: "center"}}>
@@ -225,13 +225,11 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border-2 relative ${
-                plan.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20 scale-105' : 'border-slate-700/30'
-              } hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300`}>
+                plan.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' : 'border-slate-700/30'
+              } hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 ${plan.popular ? 'scale-105' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium border border-purple-400">
+                    Most Popular
                   </div>
                 )}
                 
@@ -280,17 +278,24 @@ function App() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {niches.map((niche, index) => (
-              <div key={index} className="group cursor-pointer">
-                <button className="text-sm font-medium text-slate-300 text-center hover:text-purple-400 transition-colors duration-300 ease-in-out bg-transparent border border-slate-300 hover:border-purple-400 rounded-md px-8 py-4 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50" style={{width: "280px", height: "80px", marginBottom: "20px"}}>
-                  {niche.title}
+              <div key={index} className={`group cursor-pointer bg-slate-800/20 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 ${index === 0 ? 'border-2 border-purple-500 shadow-xl shadow-purple-500/20' : 'border border-slate-700/30'} hover:shadow-lg hover:shadow-purple-500/10`}>
+                <button 
+                  className={`w-full h-20 mb-4 text-sm font-medium text-center rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center overflow-hidden ${
+                    index === 0 
+                      ? 'bg-slate-700/30 text-slate-300 hover:bg-slate-600/30' 
+                      : 'bg-slate-700/30 text-slate-300 hover:bg-slate-600/30'
+                  }`}
+                  title={niche.title} // Tooltip for full text on hover
+                >
+                  <span className="truncate w-full text-ellipsis">{niche.title}</span>
                 </button>
-                <div className="bg-slate-800/20 backdrop-blur-sm border border-slate-700/30 rounded-2xl overflow-hidden mb-4 aspect-video relative hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group-hover:scale-105">
+                <div className="overflow-hidden mb-4 aspect-video relative group-hover:scale-105">
                   <video className="absolute inset-0 w-full h-full object-cover" controls>
                     <source src="your-video-link-here.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <p className="text-center text-slate-400 text-xs mt-2" style={{fontSize: "16px"}}>{niche.description}</p>
+                <p className="text-center text-slate-400 text-xs mt-2">{niche.description}</p>
               </div>
             ))}
           </div>
@@ -318,12 +323,13 @@ function App() {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 flex items-center"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 flex items-center justify-center whitespace-normal break-words min-w-0 w-full sm:w-auto overflow-hidden"
               style={{
                 background: 'linear-gradient(to right, rgba(234, 245, 237, 0.76), rgba(59, 130, 246, 0.7))',
               }}
             >
-              Join <ArrowRight className="w-4 h-4 ml-2" />
+              <span className="inline-block">Join</span>
+              <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
             </button>
           </form>
         </div>
@@ -336,7 +342,7 @@ function App() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center mb-4">
                 <Zap className="w-8 h-8 text-purple-400" />
-                <span className="ml-2 text-xl font-bold">VideoAI</span>
+                <span className="ml-2 text-xl font-bold">Moviq AI</span>
               </div>
               <p className="text-slate-400 mb-6 max-w-md">
                 Revolutionizing content creation with AI-powered video automation. 
