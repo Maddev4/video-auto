@@ -278,13 +278,10 @@ function App() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {niches.map((niche, index) => (
-              <div key={index} className={`group cursor-pointer bg-slate-800/20 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 ${index === 0 ? 'border-2 border-purple-500 shadow-xl shadow-purple-500/20' : 'border border-slate-700/30'} hover:shadow-lg hover:shadow-purple-500/10`}>
+              <div key={index} className={`group cursor-pointer bg-slate-800/20 backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 border border-slate-700/30 hover:shadow-lg hover:shadow-purple-500/10`}>
                 <button 
-                  className={`w-full h-20 mb-4 text-sm font-medium text-center rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center overflow-hidden ${
-                    index === 0 
-                      ? 'bg-slate-700/30 text-slate-300 hover:bg-slate-600/30' 
-                      : 'bg-slate-700/30 text-slate-300 hover:bg-slate-600/30'
-                  }`}
+                  className="w-full h-20 mb-4 text-sm font-medium text-center rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 transition-colors duration-300 ease-in-out flex items-center justify-center overflow-hidden 
+                    bg-slate-700/30 text-slate-300 hover:bg-slate-600/30"
                   title={niche.title} // Tooltip for full text on hover
                 >
                   <span className="truncate w-full text-ellipsis">{niche.title}</span>
