@@ -349,7 +349,7 @@ function App() {
               </div>
             ))}
           </div>
-          <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto text-center">
             Video editors charge $25–$80 per minute for faceless documentary
             videos like these. With our platform, you get the same result for
             under $2 per minute — fully automated
